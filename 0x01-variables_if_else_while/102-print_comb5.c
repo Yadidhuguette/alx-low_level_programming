@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Print numbers from 0 to 99
+ * main - Print numbers fr0m 0 to 99
  *
  * Return: Always 0 (Success)
  */
@@ -46,4 +46,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
