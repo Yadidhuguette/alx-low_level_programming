@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints combinations of numbers between 0 to 9 having commas and spaces.
+ * main - Prints combinations of numbers between 0 to 9 with commas and spaces.
  *
  * Return: Always 0 (Success)
  */
