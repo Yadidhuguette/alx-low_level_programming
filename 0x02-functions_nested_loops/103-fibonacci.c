@@ -25,4 +25,3 @@ int main(void)
 		printf("%ld\n", nxy);
 		return (0);
 }
-	
