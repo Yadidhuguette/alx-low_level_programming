@@ -10,7 +10,7 @@ void print_times_table(int n)
 {
 	int a, b, prod;
 
-	if (n >=0 && n<= 15)
+	if (n >= 0 && n<= 15)
 	{
 		for (a = 0; a <= n; a++)
 		{
@@ -18,7 +18,7 @@ void print_times_table(int n)
 
 			for (b = 1; b <= n; b++)
 			{
-				_putchar(';');
+				_putchar(',');
 				_putchar(' ');
 
 				prod = a * b;
