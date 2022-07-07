@@ -12,11 +12,11 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	printf("%1d, %1d", x, y);
+	printf("%ld, %ld", x, y);
 	for (a = 0; a < 48; a++)
 	{
 		xy = x + y;
-		printf(", %1d", xy);
+		printf(", %ld", xy);
 		x = y;
 		y = xy;
 	}
