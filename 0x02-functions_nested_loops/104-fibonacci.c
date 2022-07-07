@@ -20,7 +20,7 @@ int main(void)
 	{
 	xy = x + y;
 	printf(", %ld", xy);
-	x =y;
+	x = y;
 	y = xy;
 	}
 	else
@@ -30,7 +30,7 @@ int main(void)
 			x1 = x % 1000000000;
 			y2 = y % 1000000000;
 			x = x / 1000000000;
-			y = y /10000000000;
+			y = y / 1000000000;
 			boolean2 = 0;
 		}
 		xy2 = (x1 + y2);
