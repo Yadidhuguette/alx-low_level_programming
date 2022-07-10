@@ -7,44 +7,45 @@
  */
 int main(void)
 {
-	int a, boolean1, boolean2;
-	long int x, y, xy, xy2, x1, y2;
+	int a, boolean, boolean2;
+	long int i, j, n, n2, k1, k2;
 
-	x = 1;
-	y = 2;
-	boolean1 = boolean2 = 1;
-	printf("%ld, %ld", x, y);
+	i = 1;
+	j = 2;
+	boolean = boolean2 = 1;
+	printf("%ld, %ld", i, j);
 	for (a = 0; a < 96; a++)
 	{
-	if (boolean1)
-	{
-	xy = x + y;
-	printf(", %ld", xy);
-	x = y;
-	y = xy;
-	}
-	else
-	{
-		if (boolean1)
+		if (boolean)
 		{
-			x1 = x % 1000000000;
-			y2 = y % 1000000000;
-			x = x / 1000000000;
-			y = y / 1000000000;
-			boolean2 = 0;
+			n = i + j;
+			printf(", %ld", n);
+			i = j;
+			j = n;
 		}
-		xy2 = (x1 + y2);
-		xy = x + y + (xy2 / 1000000000);
-		printf(", %ld", xy);
-		printf("%ld", xy2 % 1000000000);
-		x = y;
-		x1 = y2;
-		y = xy;
-		y2 = (xy2 % 1000000000);
-	}
-	if (((x + y) < 0) && boolean1 == 1)
-		boolean1 = 0;
+		else
+		{
+			if (boolean2)
+			{
+				k1 = i % 1000000000;
+				k2 = j % 1000000000;
+				i = i / 1000000000;
+				j = j / 1000000000;
+				boolean2 = 0;
+			}
+			n2 = (k1 + k2);
+			n = i + j + (n2 / 1000000000);
+			printf(", %ld", n);
+			printf("%ld", n2 % 1000000000);
+			i = j;
+			k1 = k2;
+			j = n;
+			k2 = (n2 % 1000000000);
+		}
+		if (((i + j) < 0) && boolean == 1)
+			boolean = 0;
 	}
 	printf("\n");
 	return (0);
 }
+
