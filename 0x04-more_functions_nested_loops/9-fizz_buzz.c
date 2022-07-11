@@ -1,0 +1,36 @@
+#include "stdio.h"
+
+/**
+ * main - prints the numbers from 0 t0 100 but Fizz for the multiple of 3,
+ *        print Buzz for multiples of 5 and FizzBuzz for both
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int i;
+
+	i = 1;
+	printf("%d", i);
+	for (i = 2; i <= 100; i++)
+	{
+		if ((i % 3 == 0) && (i % 5 == 0))
+		{
+			printf(" FizzBuzz");
+		}
+		else if (i % 3 == 0)
+		{
+			printf(" Fizz");
+		}
+		else if (i % 5 == 0)
+		{
+			printf(" Buzz");
+		}
+		else
+		{
+			printf(" %d", i);
+		}
+	}
+	printf("\n");
+	return (0);
+}		
