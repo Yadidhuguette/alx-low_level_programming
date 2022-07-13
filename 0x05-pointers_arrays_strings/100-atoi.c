@@ -7,24 +7,29 @@
  */
 int _atoi(char *s)
 {
-	int i;
-	unsigned int count;
-	char *temp;
+	unsigned int num = 0, n = 0, mn = 0, li = 1, j = 1, i;
 
-	temp = s;
-	count = 0;
-	i = 1;
-	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
+	while (*(s + num) != '\0')
 	{
-		if (*temp == '-')
-			i *= -1;
+		if (n > 0 && (*(s + num) < '0' || *(s + num) > '9'))
+			break;
+		if (*(s + num) == '-')
+			li *= -1;
+
+		if ((*(s + num) >= '0') && (*(s + num) <= '9'))
+		{
+			if (n > 0)
+				j *= 10;
+			n++;
+		}
+		num++;
 	}
-	if (*temp != '\0')
+
+	for (i = num - n; i < num; i++)
 	{
-		do {
-			count = count * 10 + (*temp - '0');
-			temp++;
-		} while (*temp >= '0' && *temp <= '9');
+		mn = mn + ((*(s + i) - 48) * j);
+		j /= 10;
 	}
-	return (count * i);
+	return (mn * li);
 }
+
