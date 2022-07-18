@@ -2,32 +2,32 @@
 
 /**
  * cap_string - capitalizes all words of a string
- * @n: string to be capitalized
+ * @str: string to be capitalized
  * Return: result
  */
-char *cap_string(char *n)
+char *cap_string(char *str)
 {
 	int i = 0;
 
-	while (n[++i])
+	while (str[++i])
 	{
-		while (!(n[i] >= 'A' && n[i] <= 'Z'))
+		while (!(str[i] >= 'a' && str[i] <= 'z'))
 			i++;
 
-		if (n[i - 1] == ' ' ||
-				n[i - 1] == '\t' ||
-				n[i - 1] == '\n' ||
-				n[i - 1] == ',' ||
-				n[i - 1] == ';' ||
-				n[i - 1] == '.' ||
-				n[i - 1] == '!' ||
-				n[i - 1] == '"' ||
-				n[i - 1] == '(' ||
-				n[i - 1] == ')' ||
-				n[i - 1] == '{' ||
-				n[i - 1] == '}')
-			n[i] -= 32;
+		if (str[i - 1] == ' ' ||
+				str[i - 1] == '\t' ||
+				str[i - 1] == '\n' ||
+				str[i - 1] == ',' ||
+				str[i - 1] == ';' ||
+				str[i - 1] == '.' ||
+				str[i - 1] == '!' ||
+				str[i - 1] == '"' ||
+				str[i - 1] == '(' ||
+				str[i - 1] == ')' ||
+				str[i - 1] == '{' ||
+				str[i - 1] == '}')
+			str[i] -= 32;
 	}
 
-	return (n);
+	return (str);
 }
