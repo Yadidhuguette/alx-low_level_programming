@@ -11,7 +11,7 @@ char *cap_string(char *n)
 
 	while (n[++i])
 	{
-		while (!(n[i] >= 'a' && n[i] <= 'z'))
+		while (!(n[i] >= 'A' && n[i] <= 'Z'))
 			i++;
 
 		if (n[i - 1] == ' ' ||
@@ -28,5 +28,6 @@ char *cap_string(char *n)
 				n[i - 1] == '}')
 			n[i] -= 32;
 	}
+
 	return (n);
 }
