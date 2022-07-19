@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * cap_string - capitalizes all words of a string
@@ -28,6 +29,5 @@ char *cap_string(char *str)
 				str[count - 1] == '}')
 			str[count] -= 32;
 	}
-	
 	return (str);
 }
