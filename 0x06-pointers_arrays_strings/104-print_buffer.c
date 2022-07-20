@@ -3,8 +3,8 @@
 
 /**
  * print_buffer - prints a buffer
- * @b: pointed buffer
- * @size: size of buffer
+ * @b: the  buffer
+ * @size: size of the buffer
  */
 void print_buffer(char *b, int size)
 {
