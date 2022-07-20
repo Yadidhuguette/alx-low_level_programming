@@ -8,7 +8,7 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i, j, k;
+	int i = 0, j, k;
 
 	if (size <= 0)
 		printf("\n");
@@ -26,6 +26,7 @@ void print_buffer(char *b, int size)
 				else
 					printf(" ");
 			}
+			printf(" ");
 			for (k = i; k < i + 10; k++)
 			{
 				if (k >= size)
