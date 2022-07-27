@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - that multiplies two numbers
  * @argc: number of agurments
