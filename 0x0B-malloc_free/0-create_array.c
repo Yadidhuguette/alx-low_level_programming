@@ -9,7 +9,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	chr *ar;
+	char *ar;
 	unsigned int j;
 
 	if (size == 0)
@@ -22,7 +22,7 @@ char *create_array(unsigned int size, char c)
 	if (ar == NULL)
 		return (NULL);
 
-	for (i = 0; j < size; j++)
+	for (j = 0; j < size; j++)
 		ar[j] = c;
 
 	return (ar);
