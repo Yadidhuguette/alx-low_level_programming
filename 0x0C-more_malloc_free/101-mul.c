@@ -4,8 +4,10 @@
 #include <ctype.h>
 
 /**
- * _nbzero - finds if number is zero
+ * _nbzero - determines if number is zero
  * @argv: argument vector.
+ *
+ * Return: void
  */
 void _nbzero(char *argv[])
 {
@@ -33,7 +35,7 @@ void _nbzero(char *argv[])
 }
 
 /**
- * crt_array - sets new array to zero
+ * crt_array - sets memory to zero
  * @ar: char array.
  * @len: length
  *
@@ -50,7 +52,7 @@ char *crt_array(char *ar, int len)
 }
 
 /**
- * _find_num - finds the length of the number
+ * _find_num - determines the length of the number
  * and checks if number is in base 10.
  * @argv: arguments vector.
  * @n: row of the array
@@ -80,17 +82,17 @@ int _find_num(char *argv[], int n)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, pro, mul, mul1, i, j, k, kl;
+	int n1, n2, pro, mul, mul1, i, j, k, kl;
 	char *p;
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
-	num1 = _find_num(argv, 1), num2 = _find_num(argv, 2);
-	_nbzero(argv), pro = num1 + num2, p = malloc(pro + 1);
+	n1 = _find_num(argv, 1), n2 = _find_num(argv, 2);
+	_nbzero(argv), pro = n1 + n2, p = malloc(pro + 1);
 	if (p == NULL)
 		printf("Error\n"), exit(98);
 	p = crt_array(p, pro);
-	k = pro - 1, i = num1 - 1, j = num2 - 1, kl = mul1 = 0;
+	k = pro - 1, i = n1 - 1, j = n2 - 1, kl = mul1 = 0;
 	for (; k >= 0; k--, i--)
 	{
 		if (i < 0)
@@ -102,7 +104,7 @@ int main(int argc, char *argv[])
 					p[k - 1] = (mul / 10) + '0';
 				p[k] = (mul % 10) + '0';
 			}
-			i = num1 - 1, j--, mul1 = 0, kl++, k = pro - (1 + kl);
+			i = n1 - 1, j--, mul1 = 0, kl++, k = pro - (1 + kl);
 		}
 		if (j < 0)
 		{
@@ -110,7 +112,7 @@ int main(int argc, char *argv[])
 				break;
 			pro--;
 			free(p), p = malloc(pro + 1), p = crt_array(p, pro);
-			k = pro - 1, i = num1 - 1, j = num2 - 1, kl = mul1 = 0;
+			k = pro - 1, i = n1 - 1, j = n2 - 1, kl = mul1 = 0;
 		}
 		if (j >= 0)
 		{
