@@ -3,8 +3,8 @@
 
 /**
  * flip_bits -  returns the number of bits you would need to flip 
- * @n: long int 1
- * @m: long int 2
+ * @n: first long int
+ * @m: second long int
  *
  * Return: number of bits needed
  */
